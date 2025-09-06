@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About - MiniBlog</title>
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+  <%- include("partials/header.ejs"); %>
+  <main class="main-about">
+    <section>
+      <h2>What is MiniBlog?</h2>
+      <p>MiniBlog is a lightweight blogging app built using Node.js, Express, and EJS. It allows users to create and read blog posts in a clean, simple interface.</p>
+    </section>
+
+    <section>
+      <h2>Why did we build it?</h2>
+      <p>This project was created to demonstrate how server-side rendering works without using a database. It’s perfect for learning, prototyping, or quick demos.</p>
+    </section>
+    <section class="feedback-section">
+      <h2>We’d love your feedback</h2>
+      <form action="/feedback" method="POST" class="feedback-form">
+        <div class="user-data">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required>
+    
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="send-message">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+    
+          <button type="submit" class="send-button">Send</button>
+        </div>
+
+      </form>
+    </section>
+    
+  </main>
+  <%- include("partials/footer.ejs"); %>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiniBlog</title>
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+  <%- include("partials/header.ejs"); %>
+  <main class="main-index">
+      <h1 class="welcome-text">Welcome to MiniBlog!</h1>
+      <p class="welcome-desc">
+        Your space to share thoughts, ideas, and stories.
+        Start writing, keep reading, and enjoy the journey.
+      </p>
+      <div class="action-buttons">
+        <a href="../create" class="btn">Create a New Post</a>
+        <a href="../view" class="btn">View All Posts</a>
+      </div>
+  </main>
+  <%- include("partials/footer.ejs"); %>
+</body>
+</html>

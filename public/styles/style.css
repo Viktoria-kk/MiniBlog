@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --background:#EFE4D2;
+  --primary: #254D70;
+  --secondary: #131D4F;
+  --accent: #954C2E;
+}
+
+.main-about h2, h1 {
+  display: flex;
+  justify-content: center;
+  font-family: "playfair display";
+  color: var(--primary);
+  font-size: 45px;
+}
+
+body{
+  background: var(--background);
+  font-family: "inter", "sans-serif";
+}
+
+header {
+  background: var(--secondary);
+  color: var(--background);
+  font-family: "playfair display";
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px;
+}
+
+header a, .logo {
+  font-size: 24px;
+  text-decoration: none;
+  color: var(--background)
+}
+
+nav ul{
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+nav ul a {
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--background)
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  min-height: 80vh;
+  margin: 32px;
+}
+
+.main-index, .main-create, .main-about, .main-edit {
+  align-items:center;
+  text-align: center;
+}
+
+.welcome-desc {
+  font-size: 20px;
+  color: #333333;
+}
+
+.btn {
+  border: none;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: var(--primary);
+  color: var(--background);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--accent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.action-buttons {
+  display: flex;
+  gap:16px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--background);
+  background-color: var(--secondary);
+  padding: 20px;
+}
+
+/*create.ejs*/
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+label {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 32px;
+  font-family: "playfair display";
+}
+.title {
+  width: 100%;
+}
+
+textarea, .title {
+  padding: 10px;
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+}
+
+input::placeholder, textarea::placeholder {
+  font-size: 16px;
+  font-family: "inherit";
+}
+
+/* view.ejs*/
+
+.blogs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card {
+  width: 360px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: var(--secondary);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  color: var(--background);
+  gap: 10px;
+}
+
+.card p {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+.card p::-webkit-scrollbar {
+  width: 8px;
+}
+.card p::-webkit-scrollbar-thumb {
+  background-color: var(--background);
+  border-radius: 4px;
+}
+
+.card h3 {
+  font-family: "playfair display", sans-serif;
+}
+
+/*about.ejs*/
+
+.main-about p {
+  color: #333333;
+  width: 500px;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.feedback-section {
+  padding: 32px;
+  background-color: var(--primary);
+  color: var(--background);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-section h2 {
+  margin-bottom: 16px;
+  font-size: 40px;
+  color: var(--background);
+}
+
+.feedback-form {
+  flex-direction: row;
+  gap: 24px;
+}
+.send-message, .user-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.feedback-form label {
+  font-size: 24px;
+  color: var(--background);
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.send-button {
+  background-color: var(--accent);
+  color: var(--background);
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.send-button:hover {
+  background-color: var(--background);
+  color: var(--accent);
+}
+
+/*burger menu*/
+.burger {
+  cursor: pointer;
+  display: none;
+  background-color: transparent;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: var(--secondary);
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+  }
+}

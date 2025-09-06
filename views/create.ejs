@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <title>Create a Post</title>
+  </head>
+  <body>
+    <%- include("partials/header.ejs"); %>
+    <main class="main-create">
+      <form action="/submit" method="POST">
+        <label for="title">Blog Title:</label>
+        <input
+          class="title"
+          type="text"
+          name="title"
+          placeholder="Enter Title Here"
+          required
+        />
+        <label for="description">Description:</label>
+        <textarea
+          name="description"
+          rows="20"
+          cols="50"
+          placeholder="Write Your Blog Content Here..."
+          required
+        ></textarea>
+        <input type="submit" value="Submit" class="btn" />
+      </form>
+    </main>
+    <%- include("partials/footer.ejs"); %>
+  </body>
+</html>
