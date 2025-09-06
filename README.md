@@ -22,7 +22,3 @@ This project is designed for learning and prototyping server-side rendering with
 - **Express.js** – web framework  
 - **EJS** – templating engine for server-side rendering  
 - **CSS** – simple styling  
-
----
-
-## 📂 Project Structure
